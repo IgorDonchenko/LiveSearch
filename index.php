@@ -3,12 +3,34 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-    
-	
-	
-	
     <meta charset="UTF-8" />
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    <script>        
+    // function funcBefore () {
+    //     $("#information").text ("Ожидание...");
+    // }
+
+    // function funcSuccess (data) {
+    //     $("#information").text (data);
+    // }
+
+    // $(document).ready (function () {
+    //     $("#load").bind("click", function () {
+    //     var admin = "Admin";
+    //         $.ajax ({
+    //             url: "details.php",
+    //             type: "POST",
+    //             data: ({name: admin, number: 5}),
+    //             dataType: "html",
+    //             beforeSend: funcBefore,
+    //             success: funcSuccess
+    //         });
+    //     });
+    // });
+    </script>
 </head>
 <body>
 <div class="container">
@@ -43,6 +65,10 @@
             
         </div>
     </div>
+
+
+    <p id="load" style="cursor:pointer">Загрузить данные</p>
+    <div id="information"></div>
 
 	<script src="js/js.js"></script>
 

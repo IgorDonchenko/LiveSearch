@@ -22,3 +22,25 @@ document.querySelector('#elastic').oninput = function () {
 		});
 	}
 }
+
+function funcBefore () {
+	$("#information").text ("Ожидание...");
+}
+
+function funcSuccess (data) {
+	$("#information").text (data);
+}
+
+$(document).ready (function () {
+	$("#load").bind("click", function () {
+	var admin = "Admin";
+		$.ajax ({
+			url: "details.php",
+			type: "POST",
+			data: ({name: admin, number: 5}),
+			dataType: "html",
+			beforeSend: funcBefore,
+			success: funcSuccess
+		});
+	});
+});
