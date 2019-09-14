@@ -1,9 +1,15 @@
+li {
+	list-style-type: none;
+}
+
 .elastic li{
 	transition: all ease 500ms;
+	text-decoration: none;
 }
 
 .elastic li.hide {
 	display: none;
+	text-decoration: none;
 }
 
 mark {

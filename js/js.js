@@ -1,6 +1,6 @@
 document.querySelector('#elastic').oninput = function () {
-	let val = this.value.trim();
-	let elasticItems = document.querySelectorAll('.elastic li.my_seach');
+	let val = this.value.trim();	
+	let elasticItems = document.querySelectorAll('.elastic li');
 	if (val != '') {
 		elasticItems.forEach(function (elem) {
 			
@@ -8,9 +8,10 @@ document.querySelector('#elastic').oninput = function () {
 				elem.classList.add('hide');
 				//elem.innerHTML = elem.innerText;
 				// console.log(elem.innerHTML);
+				
 			} else {
 				elem.classList.remove('hide');
-				//let str = elem.innerText; Строка переводит элементы HTML в ТЕКСТ
+				//let str = elem.innerText;  Строка, меняющая HTML на ТЕКСТ
 				//elem.innerHTML = insertMark(str, elem.innerText.search(val), val.length);
 			}
 		});
