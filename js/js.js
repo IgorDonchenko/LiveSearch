@@ -1,6 +1,6 @@
 document.querySelector('#elastic').oninput = function () {
 	let val = this.value.trim();	
-	let elasticItems = document.querySelectorAll('.elastic li');
+	let elasticItems = document.querySelectorAll('.elastic .control');
 	if (val != '') {
 		elasticItems.forEach(function (elem) {
 			

@@ -2,12 +2,12 @@ li {
 	list-style-type: none;
 }
 
-.elastic li{
+.elastic .control{
 	transition: all ease 500ms;
 	text-decoration: none;
 }
 
-.elastic li.hide {
+.elastic .control.hide {
 	display: none;
 	text-decoration: none;
 }
