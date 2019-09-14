@@ -8,29 +8,7 @@
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
-    <script>        
-    // function funcBefore () {
-    //     $("#information").text ("Ожидание...");
-    // }
 
-    // function funcSuccess (data) {
-    //     $("#information").text (data);
-    // }
-
-    // $(document).ready (function () {
-    //     $("#load").bind("click", function () {
-    //     var admin = "Admin";
-    //         $.ajax ({
-    //             url: "details.php",
-    //             type: "POST",
-    //             data: ({name: admin, number: 5}),
-    //             dataType: "html",
-    //             beforeSend: funcBefore,
-    //             success: funcSuccess
-    //         });
-    //     });
-    // });
-    </script>
 </head>
 <body>
 <div class="container">
@@ -65,12 +43,25 @@
             
         </div>
     </div>
+    <table>
+        <tr>
+            <td><p>Один</p></td>
+            <td><p>Два</p></td>
+            <td><p>Три</p></td>
+            <td><p>Четыре</p></td>
+            <td><p>Пять</p></td>
+            <td><p>Шесть</p></td>
+            <td><p>Семь</p></td>
+            <td><p>Восемь</p></td>
+            <td><p id="load" style="cursor:pointer">Загрузить данные</p></td>
+        </tr>
+    </table>
 
 
     <p id="load" style="cursor:pointer">Загрузить данные</p>
     <div id="information"></div>
 
-	<script src="js/js.js"></script>
+    <script src="js/js.js"></script>    
 
 </body>
 </html>

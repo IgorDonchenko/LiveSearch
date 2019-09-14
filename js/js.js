@@ -23,6 +23,18 @@ document.querySelector('#elastic').oninput = function () {
 	}
 }
 
+function funcDataMy () {
+	const items = document.querySelectorAll('tr>td>p');
+
+	//console.log(items);
+	items.forEach(item => {
+		item.addEventListener('click',(e)=>{
+			var mytext = e.target.textContent;
+			console.log(mytext);
+		});
+	});
+}
+
 function funcBefore () {
 	$("#information").text ("Ожидание...");
 }
@@ -44,3 +56,17 @@ $(document).ready (function () {
 		});
 	});
 });
+
+
+
+funcDataMy ();
+
+// const items = document.querySelectorAll('tr>td>p');
+
+// //console.log(items);
+// items.forEach(item => {
+// 	item.addEventListener('click',(e)=>{
+// 		var mytext = e.target.textContent;
+// 		console.log(mytext);
+// 	});
+// });
