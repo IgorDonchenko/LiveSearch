@@ -1,3 +1,5 @@
+// 1  Динамический поиск
+
 document.querySelector('#elastic').oninput = function () {
 	let val = this.value.trim();	
 	let elasticItems = document.querySelectorAll('.elastic .control');
@@ -23,18 +25,8 @@ document.querySelector('#elastic').oninput = function () {
 	}
 }
 
-function funcDataMy () {
-	const items = document.querySelectorAll('tr>td>p');
-
-	//console.log(items);
-	items.forEach(item => {
-		item.addEventListener('click',(e)=>{
-			var mytext = e.target.textContent;
-			console.log(mytext);
-		});
-	});
-}
-
+// 2  AJAX
+/*
 function funcBefore () {
 	$("#information").text ("Ожидание...");
 }
@@ -57,16 +49,48 @@ $(document).ready (function () {
 	});
 });
 
+// 3  Получение значения тега 
+
+function funcDataMy () {
+	var items = document.querySelectorAll('tr>td>p');
+
+	//console.log(items);
+	items.forEach(item => {
+		item.addEventListener('click',(e)=>{
+			var mytext = e.target.textContent;
+			console.log(mytext);			
+		});
+		
+	});
+}
+
 
 
 funcDataMy ();
 
-// const items = document.querySelectorAll('tr>td>p');
+*/
 
-// //console.log(items);
-// items.forEach(item => {
-// 	item.addEventListener('click',(e)=>{
-// 		var mytext = e.target.textContent;
-// 		console.log(mytext);
-// 	});
-// });
+//  Окончательное решение передачи в AJAX
+
+function funcBefore () {
+	$("#information").text ("Ожидание...");
+}
+
+function funcSuccess (data) {
+	$("#information").text (data);
+}
+
+function MyNewFunck(func) {
+	var admin = func;
+	$.ajax ({
+		url: "details.php",
+		type: "POST",
+		data: ({name: admin, number: 5}),
+		dataType: "html",
+		beforeSend: funcBefore,
+		success: funcSuccess
+	});
+	
+}
+
+//console.log(a);
